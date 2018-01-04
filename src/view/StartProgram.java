@@ -6,7 +6,7 @@ import java.util.Scanner;
 import controller.ListItemHelper;
 import model.ListItem;
 
-public class StartProgramFINISHED {
+public class StartProgram {
 
 		static Scanner in = new Scanner(System.in);
 		static ListItemHelper lih = new ListItemHelper();
