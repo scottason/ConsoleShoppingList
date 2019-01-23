@@ -1,4 +1,4 @@
-package view;
+
 
 import java.util.List;
 import java.util.Scanner;
@@ -17,10 +17,9 @@ public class StartProgram {
 			String store = in.nextLine();
 			System.out.print("Enter an item: ");
 			String item = in.nextLine();
-			
+
 			ListItem toAdd = new ListItem(store, item);
 			lih.insertItem(toAdd);
-
 		}
 
 		private static void deleteAnItem() {
@@ -29,8 +28,8 @@ public class StartProgram {
 			String store = in.nextLine();
 			System.out.print("Enter the item to delete: ");
 			String item = in.nextLine();
+
 			ListItem toDelete = new ListItem(store, item);
-			
 			lih.deleteItem(toDelete);
 		}
 
@@ -55,7 +54,7 @@ public class StartProgram {
 			if (!foundItems.isEmpty()) {
 				System.out.println("Found Results.");
 				for (ListItem l : foundItems) {
-					System.out.println("ID: " + l.getId() + " - " + l.returnItemDetails());
+					System.out.println(l.getId() + " : " + l.returnItemDetails());
 				}
 				System.out.print("Which ID to edit: ");
 				int idToEdit = in.nextInt();
@@ -124,10 +123,9 @@ public class StartProgram {
 		}
 
 		private static void viewTheList() {
-			// TODO Auto-generated method stub
 			List<ListItem> allItems = lih.showAllItems();
-			for(ListItem l : allItems){
-				System.out.println(l.returnItemDetails());
+			for(ListItem singleItem : allItems){
+				System.out.println(singleItem.returnItemDetails());
 			}
 
 		}

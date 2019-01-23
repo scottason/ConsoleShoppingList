@@ -18,12 +18,14 @@ public class ListItem {
 	private String store;
 	@Column(name="ITEM")
 	private String item;
-
+	
 	public ListItem() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	public ListItem(String store, String item) {
+		super();
 		this.store = store;
 		this.item = item;
 	}
@@ -51,13 +53,7 @@ public class ListItem {
 	public void setItem(String item) {
 		this.item = item;
 	}
-
-	@Override
-	public String toString() {
-		return "ListItem [id=" + id + ", store=" + store + ", item=" + item + "]";
-	}
-	
-	public String returnItemDetails() {
+	public String returnItemDetails( ) {
 		return store + ": " + item;
 	}
 
